@@ -1,0 +1,11 @@
+.movie-slide{
+    background-size: contain; /* Fit the image inside the container without cropping */
+    background-repeat: no-repeat; /* Prevent repeating the image */
+    background-position: center center; /* Center the image horizontally and vertically */
+    width: 100vw; /* Make the container width the same as the viewport width */
+    height: 100vh; 
+    
+  }
+ .titlePara{
+    color: aliceblue;
+ } 
