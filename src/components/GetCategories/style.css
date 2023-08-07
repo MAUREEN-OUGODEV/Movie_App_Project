@@ -1,4 +1,4 @@
-button{ 
-    background-color: antiquewhite;
-    color: black;
+.btn{ 
+    gap: 20px !important;
+    
 }
