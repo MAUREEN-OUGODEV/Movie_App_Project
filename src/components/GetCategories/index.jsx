@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import { GetCategories } from '../../utils/utilities'; // Update the path to your api.js file
-import './style.css'
 
-function CategoriesComponent() {
+import React, { useEffect, useState } from 'react';
+import { GetCategories } from '../../utils/utilities';
+import './style.css';
+
+function CategoriesComponent({ selectedCategory, handleCategoryChange }) {
   const [categories, setCategories] = useState([]);
   const [loading, setLoading] = useState(false);
 
@@ -11,7 +12,7 @@ function CategoriesComponent() {
       setLoading(true);
       const categoriesData = await GetCategories();
       if (typeof categoriesData === 'string') {
-        console.error(categoriesData); // Log error message
+        console.error(categoriesData);
       } else {
         setLoading(false);
         setCategories(categoriesData.genres || []);
@@ -28,7 +29,11 @@ function CategoriesComponent() {
       <h1>Categories</h1>
       <div className="category-buttons">
         {categories.map((category) => (
-          <button key={category.id} to={`/category/${category.id}`} className="category-button">
+          <button
+            key={category.id}
+            onClick={() => handleCategoryChange(category.id, category.name)}
+            
+          >
             {category.name}
           </button>
         ))}
