@@ -29,7 +29,7 @@ function CategoriesComponent({ selectedCategory, handleCategoryChange }) {
     
       <div className="category-buttons">
         {categories.map((category) => (
-          <button type="button" className="btn btn btn-dark"
+          <button type="button" className="btn btn-outline-dark"
             onClick={() => handleCategoryChange(category.id, category.name)}
             
           >

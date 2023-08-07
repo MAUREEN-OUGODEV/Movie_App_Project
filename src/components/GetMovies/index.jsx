@@ -42,7 +42,7 @@ const GetMovies = () => {
         selectedCategory={selectedCategory}
         handleCategoryChange={handleCategoryChange}
       />
-      {selectedCategoryName !== "All" && <h1>{selectedCategoryName} Movies</h1>}
+      {selectedCategoryName !== "All" && <h1 className='headings'><span className='moviess'>{selectedCategoryName}</span> Movies</h1>}
       <div className='movies'>
         {filteredMovies.length > 0 ? (
           filteredMovies.map(item => (
