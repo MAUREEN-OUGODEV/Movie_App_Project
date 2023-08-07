@@ -8,7 +8,7 @@ import {useNavigate} from 'react-router-dom'
 
 const Navbar = () => {
     const [searchValue, setSearchValue] = useState("");
-    const [searchResults, setSearchResults] = useState([]);
+    const [ setSearchResults] = useState([]);
     const navigate=useNavigate()
     
     const handleInput = (event) => {
@@ -38,7 +38,7 @@ const Navbar = () => {
     <div className="collapse navbar-collapse">
       <ul class="navbar-nav  mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link " onClick ={handleClick} href="#">Home</a>
+          <a className="nav-link " onClick ={handleClick} href="/">Home</a>
         </li>
         <li className="nav-item">
           <a className="nav-link" href="/My list">My List</a>
