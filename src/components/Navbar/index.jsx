@@ -8,15 +8,15 @@ import {useNavigate} from 'react-router-dom'
 
 const Navbar = () => {
     const [searchValue, setSearchValue] = useState("");
-    const [searchResults, setSearchResults] = useState([]);
+    const [ setSearchResults] = useState([]);
     const navigate=useNavigate()
     
     const handleInput = (event) => {
       setSearchValue(event.target.value);
     };
     const handleSearch = async () => {
-      const results = await searchMovies(searchValue);
-      setSearchResults(results.results);
+      const searchResults = await searchMovies(searchValue);
+      setSearchResults(searchResults.results);
       navigate (`/search/${encodeURIComponent(searchValue)}`)
 
     };
